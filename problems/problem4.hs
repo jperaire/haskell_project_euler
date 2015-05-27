@@ -8,5 +8,6 @@ is_palindrome x = reverse x_list == x_list
     where x_list = to_list x
 
 largest_palindrome :: Integral a => a
-largest_palindrome = maximum . filter is_palindrome $ [x * y | x <- tdms, y <- [x..999]]
-    where tdms = [100..999]
+largest_palindrome = maximum [x * y | x <- tdms, y <- [x..999], is_palindrome (x * y)]
+    where tdms = [100..999] -- tdms = three_digit_numbers
+    
