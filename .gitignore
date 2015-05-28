@@ -1,2 +1,5 @@
 *~
 *.pyc
+*.o
+*.hi
+*/problem8
